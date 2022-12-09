@@ -11,11 +11,9 @@ applications:
           commands:
             - npx pnpm run build
             - export STANDALONE=apps/app/.next/standalone
-            - cp -r $STANDALONE/apps/app/node_modules/ $STANDALONE/node_modules/
-            - cp -r $STANDALONE/node_modules/.pnpm/ $STANDALONE/node_modules/
-            - rm -rf $STANDALONE/node_modules/.pnpm
-            - rm -rf $STANDALONE/apps/app/node_modules
-            - mv $STANDALONE/apps/app/* $STANDALONE/
+            - mv $STANDALONE/apps/app/node_modules/* $STANDALONE/node_modules
+            - mv $STANDALONE/node_modules/.pnpm/* $STANDALONE/node_modules/
+            - mv $STANDALONE/apps/app/.next $STANDALONE/.next
       artifacts:
         # IMPORTANT - Please verify your build output directory
         baseDirectory: .next

@@ -9,7 +9,7 @@ applications:
             - npx pnpm install
         build:
           commands:
-            - npx pnpm run help:build
+            - npx pnpm run build
             - export STANDALONE=apps/app/.next/standalone
             - mv $STANDALONE/apps/app/* $STANDALONE/
       artifacts:

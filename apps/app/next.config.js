@@ -5,7 +5,6 @@ const nextConfig = {
   output: 'standalone',
   experimental: {
     transpilePackages: ['@acme/ui'],
-    outputFileTracingRoot: path.join(__dirname, '../../')
   },
 }
 

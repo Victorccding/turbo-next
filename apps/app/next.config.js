@@ -2,7 +2,10 @@
 const path = require('path')
 
 const nextConfig = {
-  distDir: 'build'
+  distDir: 'build',
+  experimental: {
+    transpilePackages: ['@acme/ui'],
+  },
 }
 
 module.exports = nextConfig
